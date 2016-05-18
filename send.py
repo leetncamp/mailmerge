@@ -76,6 +76,8 @@ def clean_template(html):
 htmlTemplate = open("template.html").read().decode("utf-8")
 htmlTemplate, Subject = clean_template(htmlTemplate)
 
+message_count = 0
+
 rownumber = 1
 for row in ws.rows[1:]:
     rownumber += 1
@@ -130,13 +132,12 @@ for row in ws.rows[1:]:
 
     msg.To = rowDict['To']
     msg.From = rowDict.get("From")
-
-    if not msg.To or not msg.From:
-        #print("Missing To or From in row {0}".format(rownumber))
-        continue
-
     msg.Html = html
     logmessage = u"{2} : {1} ==> {0}".format(msg.To, msg.Subject, datetime.datetime.now())
     print logmessage
     log.info(logmessage)
     msg.snlSend()
+    message_count += 1
+
+
+print("Send {0} messages".format(message_count))
