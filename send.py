@@ -144,3 +144,4 @@ for row in ws.rows[1:]:
 
 
 print("Send {0} messages".format(message_count))
+print
