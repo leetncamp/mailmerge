@@ -115,8 +115,7 @@ for row in ws.rows[1:]:
     msg = Message()
     msg.Subject = Subject
 
-    if name:
-        rowDict['To'] = u"{1} <{0}>".format(rowDict['To'], name)
+
 
     redirect = rowDict.get('Redirect')
     if redirect:
