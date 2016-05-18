@@ -19,7 +19,7 @@ import datetime
 from django.template import engines
 from django.conf import settings
 import django
-settings.configure(SILENCED_SYSTEM_CHECKS = ["1_8.W001"])
+settings.configure()
 django.setup()
 django_engine = engines['django']
 Template = django_engine.from_string
@@ -76,12 +76,16 @@ def clean_template(html):
 htmlTemplate = open("template.html").read().decode("utf-8")
 htmlTemplate, Subject = clean_template(htmlTemplate)
 
-rownumber = 0
+rownumber = 1
 for row in ws.rows[1:]:
     rownumber += 1
     rowDict = {}
     for header in headers:
         rowDict[header] = row[headers[header]].value
+
+    if not rowDict['To'] or not rowDict['From']:
+        continue
+
     skip = str(rowDict.get("Skiprow", ""))
     if skip and skip.lower() in ["skip", "yes", "true", "1"]:
         print("skipping row {0}.".format(rownumber))
