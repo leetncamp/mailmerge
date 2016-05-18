@@ -116,7 +116,7 @@ for row in ws.rows[1:]:
     msg.Subject = Subject
 
     if name:
-        rowDict['To'] = u"<{1}>{0}".format(rowDict['To'], name)
+        rowDict['To'] = u"{1} <{0}>".format(rowDict['To'], name)
 
     redirect = rowDict.get('Redirect')
     if redirect:
@@ -133,5 +133,7 @@ for row in ws.rows[1:]:
         continue
 
     msg.Html = html
-    log.info(u"{2} : {1} ==> {0}".format(msg.To, msg.Subject, datetime.datetime.now()))
+    logmessage = u"{2} : {1} ==> {0}".format(msg.To, msg.Subject, datetime.datetime.now())
+    print logmessage
+    log.info(logmessage)
     msg.snlSend()
