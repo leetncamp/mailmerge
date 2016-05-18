@@ -134,7 +134,7 @@ for row in ws.rows[1:]:
     msg.From = rowDict.get("From")
     CC = rowDict.get("CC")
     if CC:
-        msg.Cc = CC
+        msg.CC = CC
     msg.Html = html
     logmessage = u"{2} : {1} ==> {0}".format(msg.To, msg.Subject, datetime.datetime.now())
     print logmessage
