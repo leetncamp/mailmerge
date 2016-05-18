@@ -1,0 +1,7 @@
+mailmerge.log
+*.spec
+build
+dist
+~*
+*.html
+
