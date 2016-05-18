@@ -1,5 +1,5 @@
 # mailmerge
-Create custom HTML emails by rendering an HTML template using data from .xlsx spreadsheet. Doesn't require Excel but works with excel.
+Create per-user HTML emails by rendering an HTML template using data from .xlsx spreadsheet. It doesn't require Excel but works with it. mailmerge is written in Python and includes an OS X compiled binary that requires no installation and has no dependencies. A Windows binary can be build on request. While this repositry is public, public use would require further development.
 
 Overview
 =======
