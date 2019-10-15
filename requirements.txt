@@ -1,0 +1,12 @@
+backports.functools-lru-cache==1.5
+beautifulsoup4==4.8.1
+bs4==0.0.1
+et-xmlfile==1.0.1
+html2markdown==0.1.7
+jdcal==1.4.1
+Jinja2==2.10.3
+MarkupSafe==1.1.1
+nameparser==1.0.4
+openpyxl==2.6.4
+pytz==2019.3
+soupsieve==1.9.4
