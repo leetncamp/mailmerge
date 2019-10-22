@@ -74,7 +74,10 @@ def send(To="", From="", Subject="", Html="", Text=""):
         s.send_message(message)
         log.info("Emailed {0} -> {1}".format(To, Text))
     except Exception as e:
+<<<<<<< HEAD
         debug()
+=======
+>>>>>>> 365f7a804a190e2a814fa14e83802dfeae722fd9
         log.warning("Failed to send message to {0}".format(To))
         tb = traceback.format_exc()
         print(tb)
@@ -82,7 +85,11 @@ def send(To="", From="", Subject="", Html="", Text=""):
     return()
 
 def clean_template(html):
+<<<<<<< HEAD
     soup = bs4(html, "lxml")
+=======
+    soup = bs4(html)
+>>>>>>> 365f7a804a190e2a814fa14e83802dfeae722fd9
     try:
         #Subject might be in the first line of the body.
         Subject = soup.p.text.split("Subject:")[1].strip()
