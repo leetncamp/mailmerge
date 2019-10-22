@@ -1,6 +1,6 @@
-1. Does each row have both a To and a From column?
+1. Does each row have both a to and a from column?
 2. Use the redirect column to redirect the email to another address
 3. Use the CC column to CC yourself or someone else.
-4. Use the Skiprow column to skip rows.  Use the word 'skip' to cause a row to be skipped. 
+4. Use the skiprow column to skip rows.  Use the word 'skip' to cause a row to be skipped. 
 5. Check the output in the terminal window to verify the number of emails.
 6. Check mailmerge.log to see a log of emails sent.  
