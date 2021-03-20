@@ -4,7 +4,7 @@ bs4==0.0.1
 et-xmlfile==1.0.1
 html2markdown==0.1.7
 jdcal==1.4.1
-Jinja2==2.10.3
+Jinja2==2.11.3
 lxml==4.6.2
 MarkupSafe==1.1.1
 nameparser==1.0.4
